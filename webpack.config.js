@@ -32,6 +32,7 @@ module.exports = {
       title: "起步"
     })
   ],
+  devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist"
   }
