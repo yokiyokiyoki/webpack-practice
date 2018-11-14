@@ -7,6 +7,15 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist")
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        //顺序是从右到左处理，先css进来然后style动态插入到文档里
+        use: ["style-loader", "css-loader"]
+      }
+    ]
+  },
   devServer: {
     contentBase: "./dist"
   }
