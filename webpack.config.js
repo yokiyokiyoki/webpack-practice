@@ -1,5 +1,6 @@
 //支持无配置，但是有项目也需要复杂的配置
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "none",
   entry: { app: path.resolve(__dirname, "src/index.js") },
@@ -21,6 +22,11 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "起步"
+    })
+  ],
   devServer: {
     contentBase: "./dist"
   }
