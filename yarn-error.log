@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/liyoujie/.nvm/versions/node/v8.9.4/bin/node /Users/liyoujie/.nvm/versions/node/v8.9.4/bin/yarn add webpack-dev-server -D
+  /Users/liyoujie/.nvm/versions/node/v8.9.4/bin/node /Users/liyoujie/.nvm/versions/node/v8.9.4/bin/yarn add file-loader -D
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/liyoujie/.nvm/versions/node/v8.9.4/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, copyfile '/Users/liyoujie/Library/Caches/Yarn/v1/npm-inherits-2.0.1-b17d08d326b4423e568eff719f91b0b1cbdf69f1/LICENSE' -> '/Users/liyoujie/Desktop/GitHub/webpack-practice/node_modules/assert/node_modules/inherits/LICENSE'
+  Error: ENOENT: no such file or directory, copyfile '/Users/liyoujie/Library/Caches/Yarn/v1/npm-ansi-styles-2.2.1-b432dd3358b634cf75e1e4664368240533c1ddbe/license' -> '/Users/liyoujie/Desktop/GitHub/webpack-practice/node_modules/babel-code-frame/node_modules/ansi-styles/license'
 
 npm manifest: 
   {
@@ -24,13 +24,17 @@ npm manifest:
     "main": "index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "build": "webpack"
+      "build": "webpack",
+      "start": "webpack-dev-server --open"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
+      "css-loader": "^1.0.1",
+      "style-loader": "^0.23.1",
       "webpack": "^4.25.1",
-      "webpack-cli": "^3.1.2"
+      "webpack-cli": "^3.1.2",
+      "webpack-dev-server": "^3.1.10"
     }
   }
 
