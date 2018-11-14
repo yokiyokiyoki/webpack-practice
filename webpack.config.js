@@ -1,6 +1,8 @@
 //支持无配置，但是有项目也需要复杂的配置
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+
 module.exports = {
   mode: "none",
   entry: { app: path.resolve(__dirname, "src/index.js") },
@@ -23,6 +25,9 @@ module.exports = {
     ]
   },
   plugins: [
+    //每次构建先清理dist
+    new CleanWebpackPlugin(["dist"]),
+    //动态插入文档
     new HtmlWebpackPlugin({
       title: "起步"
     })
