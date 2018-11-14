@@ -15,6 +15,7 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       },
       {
+        //file-loader接受任何类型文件，并返回处理。url-loader与其类似，只不过它可以接受一个限制值，限制值前可以转成dataUrl
         test: /\.(png|gif|svg|jpg)$/,
         use: ["file-loader"]
       }
