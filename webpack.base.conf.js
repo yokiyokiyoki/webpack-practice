@@ -1,8 +1,6 @@
 //支持无配置，但是有项目也需要复杂的配置
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const webpack = require("webpack");
 
 module.exports = {
   mode: "none",
@@ -28,18 +26,9 @@ module.exports = {
     ]
   },
   plugins: [
-    //每次构建先清理dist
-    new CleanWebpackPlugin(["dist"]),
     //动态插入文档
     new HtmlWebpackPlugin({
       title: "起步"
-    }),
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  devtool: "inline-source-map",
-  devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
-    //热更新开启，跟hmr配合使用
-    hot: true
-  }
+    })
+  ]
 };
