@@ -5,7 +5,8 @@ const webpack = require("webpack");
 
 const config = webpackMerge(common, {
   mode: "development",
-  devtool: "inline-source-map",
+  //开发环境最佳
+  devtool: "eval-source-map",
   devServer: {
     contentBase: path.resolve(__dirname, "dist"),
     //热更新开启，跟hmr配合使用
