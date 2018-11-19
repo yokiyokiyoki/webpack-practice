@@ -20,7 +20,7 @@ const config = webpackMerge(common, {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
     }),
-    //修复vendor每次打包hash变化
+    //修复vendor每次打包，如果main.js引进来新的包，module.id会跟根据解析顺序自增然后导致的hash变化
     new webpack.HashedModuleIdsPlugin()
   ],
   //优化选项
