@@ -15,7 +15,11 @@ const config = webpackMerge(common, {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
     })
-  ]
+  ],
+  optimization: {
+    //创建单个运行时
+    runtimeChunk: "single"
+  }
 });
 
 module.exports = config;
