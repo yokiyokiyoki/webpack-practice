@@ -5,11 +5,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "none",
   entry: { app: path.resolve(__dirname, "src/index.js") },
-  output: {
-    filename: "[name].[chunkHash].js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/"
-  },
   module: {
     rules: [
       {

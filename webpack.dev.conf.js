@@ -5,6 +5,11 @@ const webpack = require("webpack");
 
 const config = webpackMerge(common, {
   mode: "development",
+  output: {
+    filename: "[name].[hash].js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/"
+  },
   //开发环境最佳
   devtool: "eval-source-map",
   devServer: {

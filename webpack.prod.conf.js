@@ -7,6 +7,11 @@ const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 const config = webpackMerge(common, {
   mode: "production",
+  output: {
+    filename: "[name].[chunkHash].js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/"
+  },
   //单独生成source-map，为bundle添加了一个引用注释
   devtool: "source-map",
   plugins: [
@@ -14,11 +19,24 @@ const config = webpackMerge(common, {
     new CleanWebpackPlugin(["dist"]),
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
-    })
+    }),
+    //修复vendor每次打包hash变化
+    new webpack.HashedModuleIdsPlugin()
   ],
+  //优化选项
   optimization: {
-    //创建单个运行时
-    runtimeChunk: "single"
+    //将运行时代码单独剥离，减少主文件体积
+    runtimeChunk: "single",
+    //将第三方代码剥离，放进vendor
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all"
+        }
+      }
+    }
   }
 });
 

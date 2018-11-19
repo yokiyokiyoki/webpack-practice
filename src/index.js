@@ -1,5 +1,8 @@
 import "./style.css";
 import png from "./img/en.png";
+
+import Vue from "vue";
+
 function component() {
   let element = document.createElement("div");
 
@@ -11,6 +14,7 @@ function component() {
 
   element.appendChild(img);
 
+  console.log(Vue, 11);
   return element;
 }
 
