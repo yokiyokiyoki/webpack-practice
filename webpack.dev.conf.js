@@ -14,7 +14,10 @@ const config = webpackMerge(common, {
   },
   plugins: [
     //热更新插件
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("devlopment")
+    })
   ]
 });
 
