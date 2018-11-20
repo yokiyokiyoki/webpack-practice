@@ -15,6 +15,7 @@ function component() {
   element.appendChild(img);
 
   console.log(Vue, 11);
+  [1, 2, 3].map(n => n + 1);
   return element;
 }
 
