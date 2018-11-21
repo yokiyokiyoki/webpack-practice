@@ -6,7 +6,7 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: 'standard',
+  extends: ['standard'],
   //兼容新特性
   parser: 'babel-eslint'
 }
