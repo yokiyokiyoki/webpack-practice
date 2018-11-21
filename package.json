@@ -44,7 +44,7 @@
     "vue": "^2.5.17"
   },
   "lint-staged": {
-    "**/*.{css,js}": [
+    "*.{css,js}": [
       "yarn prettier --write",
       "git add"
     ]
