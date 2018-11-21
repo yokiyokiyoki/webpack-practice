@@ -8,7 +8,6 @@
     "build": "webpack --config webpack.prod.conf.js",
     "start": "webpack-dev-server --open --config webpack.dev.conf.js",
     "eslint-fix": "eslint src/**/*.js build/**/*.js --fix",
-    "precommit-msg": "echo '正在fomatting code...'",
     "precommit": "lint-staged"
   },
   "author": "",
@@ -46,7 +45,6 @@
   },
   "lint-staged": {
     "**/*.{css,js}": [
-      "yarn precommit-msg",
       "yarn prettier --write",
       "git add"
     ]
