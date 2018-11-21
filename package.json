@@ -45,11 +45,16 @@
     "vue": "^2.5.17"
   },
   "lint-staged": {
-    "**/*.{css,less,md,json,js}": [
-      "yarn precommit-msg",
-      "yarn prettier --write",
-      "yarn eslint --fix",
+    "**/*.{css,js}": [
       "git add"
+    ],
+    "**/*.{js}": [
+      "yarn precommit-msg",
+      "eslint --ext .js --fix"
+    ],
+    "**/*.{css}": [
+      "yarn precommit-msg",
+      "yarn prettier --write"
     ]
   }
 }
