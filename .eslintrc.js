@@ -6,12 +6,12 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: ["standard", "prettier"],
+  extends: ['standard', 'prettier'],
   //兼容新特性
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   rules: {
-    "prettier/prettier": "error"
+    'prettier/prettier': 'error'
     //覆写规则
   },
-  plugins: ["prettier"]
+  plugins: ['prettier']
 };

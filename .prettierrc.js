@@ -1,34 +1,28 @@
 // prettier --write 'src/**/*.css'来格式化代码
 module.exports = {
-  parser: "babylon",
+  parser: 'babylon',
   printWidth: 120, // 每行最大120字符
   semi: true, // 末尾分号
   singleQuote: true, // 使用单引号
   overrides: [
     {
-      files: [
-        "*.json",
-        ".eslintrc",
-        ".tslintrc",
-        ".prettierrc",
-        ".tern-project"
-      ],
+      files: ['*.json', '.eslintrc', '.tslintrc', '.prettierrc', '.tern-project'],
       options: {
-        parser: "json",
+        parser: 'json',
         tabWidth: 2
       }
     },
     {
-      files: "*.{css,sass,scss,less,styl}",
+      files: '*.{css,sass,scss,less,styl}',
       options: {
-        parser: "css",
+        parser: 'css',
         tabWidth: 2
       }
     },
     {
-      files: "*.ts",
+      files: '*.ts',
       options: {
-        parser: "typescript"
+        parser: 'typescript'
       }
     }
   ]

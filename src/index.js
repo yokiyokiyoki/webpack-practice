@@ -1,13 +1,13 @@
-import "./style.css";
-import png from "./img/en.png";
+import './style.css';
+import png from './img/en.png';
 
-import Vue from "vue";
+import Vue from 'vue';
 
 function component() {
-  let element = document.createElement("div");
+  let element = document.createElement('div');
 
   element.innerHTML = "hello world";
-  element.classList.add("hello");
+  element.classList.add('hello');
 
   let img = new Image();
   img.src = png;
