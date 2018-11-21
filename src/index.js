@@ -6,7 +6,7 @@ import Vue from 'vue';
 function component() {
   let element = document.createElement('div');
 
-  element.innerHTML = "hello world";
+  element.innerHTML = 'hello world';
   element.classList.add('hello');
 
   let img = new Image();

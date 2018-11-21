@@ -15,3 +15,9 @@ module.exports = {
   },
   plugins: ['prettier']
 };
+// {
+//   "*.js": "工程下的 js 文件",
+//   "**/*.js": "工程下所有的 js 文件",
+//   "src/*.js": "src 目录中所有的 js 文件",
+//   "src/**/*.js": "src 文件夹下所有的 js 文件"
+// }
