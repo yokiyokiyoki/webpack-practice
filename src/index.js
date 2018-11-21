@@ -1,22 +1,24 @@
-import "./style.css";
-import png from "./img/en.png";
+/* eslint-env browser */
+// 浏览器环境下，否则Image会报错
+import './style.css'
+import png from './img/en.png'
 
-import Vue from "vue";
+import Vue from 'vue'
 
-function component() {
-  let element = document.createElement("div");
+function component () {
+  let element = document.createElement('div')
 
-  element.innerHTML = "hello world";
-  element.classList.add("hello");
+  element.innerHTML = 'hello world'
+  element.classList.add('hello')
 
-  let img = new Image();
-  img.src = png;
+  let img = new Image()
+  img.src = png
 
-  element.appendChild(img);
+  element.appendChild(img)
 
-  console.log(Vue, 11);
-  [1, 2, 3].map(n => n + 1);
-  return element;
+  console.log(Vue, 11)
+  ;[1, 2, 3].map(n => n + 1)
+  return element
 }
 
-document.body.appendChild(component());
+document.body.appendChild(component())
