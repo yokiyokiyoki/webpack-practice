@@ -50,7 +50,7 @@
     ],
     "**/*.{js}": [
       "yarn precommit-msg",
-      "eslint --ext .js --fix"
+      "eslint --fix"
     ],
     "**/*.{css}": [
       "yarn precommit-msg",

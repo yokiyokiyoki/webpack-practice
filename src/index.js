@@ -22,7 +22,7 @@ function component() {
       return d;
     })
     .then(a => {
-      console.log(a)
+      console.log(a);
     });
 
   return element;
