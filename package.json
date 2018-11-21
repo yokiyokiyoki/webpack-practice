@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.prod.conf.js",
     "start": "webpack-dev-server --open --config webpack.dev.conf.js",
     "eslint-fix": "eslint src/**/*.js build/**/*.js --fix",
-    "precommit-msg": "echo '正在fomatting code...'"
+    "precommit-msg": "echo '正在fomatting code...'",
+    "precommit": "yarn precommit-msg"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +30,8 @@
     "eslint-plugin-standard": "^4.0.0",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.0.5",
     "prettier": "^1.15.2",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
