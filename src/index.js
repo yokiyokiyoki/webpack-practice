@@ -1,5 +1,3 @@
-/* eslint-env browser */
-// 浏览器环境下，否则Image会报错
 import './style.css'
 import png from './img/en.png'
 
@@ -18,6 +16,7 @@ function component () {
 
   console.log(Vue, 11)
   ;[1, 2, 3].map(n => n + 1)
+
   return element
 }
 
