@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --open --config webpack.dev.conf.js",
     "eslint-fix": "eslint src/**/*.js build/**/*.js --fix",
     "precommit-msg": "echo '正在fomatting code...'",
-    "precommit": "yarn precommit-msg"
+    "precommit": "yarn lint-staged"
   },
   "author": "",
   "license": "ISC",
@@ -43,5 +43,9 @@
   "dependencies": {
     "clean-webpack-plugin": "^1.0.0",
     "vue": "^2.5.17"
+  },
+  "lint-staged": {
+    "**/*.{css,less,md,json}": ["yarn precommit-msg", "yarn prettier --write", "git add"],
+    "**/*.{js}": ["yarn precommit-msg", "yarn eslint --fix", "git add"]
   }
 }
