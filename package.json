@@ -8,9 +8,9 @@
     "build": "webpack --config webpack.prod.conf.js",
     "start": "webpack-dev-server --open --config webpack.dev.conf.js",
     "eslint-fix": "eslint src/**/*.js build/**/*.js --fix",
-    "precommit": "lint-staged"
+    "precommit-msg": "echo 'formatting code...'"
   },
-  "author": "",
+  "author": "yoki",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -44,9 +44,16 @@
     "vue": "^2.5.17"
   },
   "lint-staged": {
-    "*.{css,js}": [
-      "yarn prettier --write",
-      "git add"
-    ]
+    "linters": {
+      "*.{js}": [
+        "eslint --fix",
+        "git add"
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn precommit-msg && lint-staged"
+    }
   }
 }
