@@ -45,11 +45,10 @@
   },
   "lint-staged": {
     "linters": {
-      "*.{js}": [
-        "eslint --fix",
-        "git add"
-      ]
-    }
+      "*.{css,js}": ["yarn prettier --write", "git add"],
+      "*.js": ["yarn eslint --fix", "git add"]
+    },
+    "ignore": ["dist/**/*.js", "dist/**/*.css"]
   },
   "husky": {
     "hooks": {
